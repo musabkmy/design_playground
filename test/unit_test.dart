@@ -48,7 +48,7 @@ void main() {
   }
 
   test('description', () {
-    moveZeroes([0, 0, 1]);
+    // print(to1GoatLatin('I speak Goat Latin'));
   });
 }
 
@@ -91,3 +91,60 @@ void moveZeroes(List<int> nums) {
 //     print(nums);
 //   }
 // }
+
+String toGoatLatin(String sentence) {
+  String output = '';
+  String trailing = '';
+  String vowelWord(String element) {
+    return '${element}ma';
+  }
+
+  String notVowelWord(String element) {
+    return '${element.substring(1)}${element.substring(0, 1)}ma';
+  }
+
+  // if (!sentence.contains(' ')) {
+  //   trailing = '${trailing}a';
+  //   if (sentence.startsWith(RegExp(r'[aeiouAEIOU]'))) {
+  //     output = '$output${vowelWord(sentence)}$trailing';
+  //   } else {
+  //     output = '$output${notVowelWord(sentence)}$trailing';
+  //   }
+  //   return output;
+  // }
+  for (var element in sentence.split(' ')) {
+    trailing = '${trailing}a';
+    if (element.startsWith(RegExp(r'[aeiouAEIOU]'))) {
+      output += '${vowelWord(element)}$trailing ';
+    } else {
+      output += '${notVowelWord(element)}$trailing ';
+    }
+  }
+  return output.trim();
+}
+
+String to1GoatLatin(String sentence) {
+  String word = '';
+  String output = '';
+  String trailing = '';
+  String vowelWord(String element) {
+    return '${element}ma';
+  }
+
+  String notVowelWord(String element) {
+    return '${element.substring(1)}${element.substring(0, 1)}ma';
+  }
+
+  do {
+    trailing = '${trailing}a';
+    word = sentence.split(' ').first;
+    if (word.startsWith(RegExp(r'[aeiouAEIOU]'))) {
+      output += '${vowelWord(word)}$trailing ';
+    } else {
+      output += '${notVowelWord(word)}$trailing ';
+    }
+    sentence.replaceFirst(word, '').trim();
+    print(sentence);
+  } while (sentence.contains(' '));
+  return output.trim();
+}

@@ -14,8 +14,8 @@ class AppColors {
   static const Color outlinedButton = Color(0xFFF9FBFD);
 
   static const Color primaryText = Colors.black;
-  static const Color secondaryText = Color(0xFFD0D3D7);
-  static const Color hintText = Color(0xFF979A9F);
+  static const Color secondaryText = Color(0xFF979A9F);
+  static const Color tertiaryText = Color(0xFFD0D3D7);
   static const Color highlightText = Color(0xFF939596);
 
   static const Color onPrimaryButtonText = secondaryText;
