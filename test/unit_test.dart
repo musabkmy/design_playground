@@ -48,8 +48,33 @@ void main() {
   }
 
   test('description', () {
+    print(per('foobar', 'o'));
+    // print(numberOfPairs([1, 2, 4, 12], [2, 4], 3));
     // print(to1GoatLatin('I speak Goat Latin'));
   });
+}
+
+int numberOfPairs(List<int> nums1, List<int> nums2, int k) {
+  int counter = 0;
+  List<int> nums3 = nums2.where((item) => k >= item).toList();
+  for (var element in nums1) {
+    for (var element2 in nums3) {
+      print('mod: ${element % element}');
+      if (element % (element2 * k) == 0) {
+        counter++;
+      }
+    }
+  }
+  print('nums2: $nums2');
+  return counter;
+}
+
+int per(String s, String letter) {
+  print(s.split('').where((element) => element == letter));
+  return (s.split('').where((element) => element == letter).length *
+          100 /
+          s.length)
+      .floor();
 }
 
 void moveZeroes(List<int> nums) {

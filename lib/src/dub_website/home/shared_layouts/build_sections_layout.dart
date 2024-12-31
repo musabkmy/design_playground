@@ -1,10 +1,11 @@
 import 'package:design_playground/core/extensions/build_context.dart';
 import 'package:design_playground/src/dub_website/data/app_sections.dart';
 import 'package:design_playground/src/dub_website/home/shared_layouts/build_dub_soc.dart';
+import 'package:design_playground/src/dub_website/home/shared_layouts/build_footer.dart';
 import 'package:design_playground/src/dub_website/home/shared_layouts/build_headline_label.dart';
 import 'package:design_playground/src/dub_website/home/shared_layouts/build_hero_layout.dart';
+import 'package:design_playground/src/dub_website/home/shared_layouts/build_main_actions.dart';
 import 'package:design_playground/src/dub_website/models/section.dart';
-import 'package:design_playground/src/dub_website/shared_layouts/app_text_button.dart';
 import 'package:design_playground/src/dub_website/theme/app_colors.dart';
 import 'package:design_playground/src/dub_website/theme/app_constants.dart';
 import 'package:design_playground/src/dub_website/theme/app_text_styles.dart';
@@ -52,16 +53,19 @@ class BuildSectionsLayout extends StatelessWidget {
               ),
               context.isTablet
                   ? AppConstants.a8SpPadding.verticalSpace
-                  : AppConstants.a48SpPadding.verticalSpace,
+                  : AppConstants.a24SpPadding.verticalSpace,
               BuildDubSOC(),
               context.isTablet
-                  ? AppConstants.a48SpPadding.verticalSpace
+                  ? AppConstants.a24SpPadding.verticalSpace
                   : AppConstants.a8SpPadding.verticalSpace,
               BuildHeadlineLabel(),
               AppConstants.a24SpPadding.verticalSpace,
               BuildMainActions(),
-              AppConstants.a48SpPadding.verticalSpace,
+              AppConstants.a28SpPadding.verticalSpace,
               BuildHeroLayout(),
+              AppConstants.a58SpPadding.verticalSpace,
+              BuildFooter(),
+              AppConstants.a38SpPadding.verticalSpace,
             ],
           );
   }
@@ -89,35 +93,5 @@ class BuildSectionsLayout extends StatelessWidget {
                   ..onTap =
                       () => Navigator.pushNamed(context, section.routeName)),
           );
-  }
-}
-
-class BuildMainActions extends StatelessWidget {
-  const BuildMainActions({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      spacing: AppConstants.a12SpPadding,
-      children: [
-        AppTextButton(
-            onPressed: () {},
-            backgroundColor: AppColors.secondaryButton,
-            largeButton: true,
-            text: 'Start for Free',
-            textStyle:
-                AppTextStyles.onButtonText(AppColors.onSecondaryButtonText)),
-        AppTextButton(
-            onPressed: () {},
-            backgroundColor: AppColors.primaryButton,
-            largeButton: true,
-            text: 'Get a Demo',
-            textStyle:
-                AppTextStyles.onButtonText(AppColors.onPrimaryButtonText)),
-      ],
-    );
   }
 }

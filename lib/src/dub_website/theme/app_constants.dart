@@ -20,6 +20,7 @@ class AppConstants {
   static double a38SpPadding = 38.sp;
   static double a42SpPadding = 42.sp;
   static double a48SpPadding = 48.sp;
+  static double a58SpPadding = 58.sp;
 
   static double aButton1Border = 20.sp;
   static double aButton2Border = 28.sp;
@@ -27,6 +28,14 @@ class AppConstants {
   static double aCard2Border = 4.sp;
 
   static double aMinimumButtonHeight = 32;
+
+  static double avatarHW = 38;
+  static double avatarRadius = avatarHW / 2;
+
+  static double smallAvatarHW = 24;
+  static double smallAvatarRadius = smallAvatarHW / 2;
+
+  static double rRectSize = smallAvatarHW;
 
   static BoxShadow aBox1Shadow = BoxShadow(
     color: AppColors.lightShadow,

@@ -44,6 +44,22 @@ class AppTextStyles {
         height: 1.2,
       );
 
+  static TextStyle body2(Color color) => GoogleFonts.roboto(
+        fontSize: 12,
+        fontWeight: FontWeight.w400,
+        color: color,
+        height: 1.2,
+      );
+
+  static TextStyle get highlightBody2 => GoogleFonts.roboto(
+        fontSize: 12,
+        fontWeight: FontWeight.bold,
+        decoration: TextDecoration.underline,
+        decorationThickness: 2,
+        color: AppColors.primaryText,
+        height: 1.2,
+      );
+
   static TextStyle get hint1 => GoogleFonts.roboto(
         fontSize: 14,
         fontWeight: FontWeight.w400,

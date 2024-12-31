@@ -1,12 +1,16 @@
 import 'package:design_playground/core/extensions/build_context.dart';
 import 'package:design_playground/src/dub_website/home/shared_layouts/build_dub_soc.dart';
+import 'package:design_playground/src/dub_website/home/shared_layouts/build_footer.dart';
 import 'package:design_playground/src/dub_website/home/shared_layouts/build_headline_label.dart';
+import 'package:design_playground/src/dub_website/home/shared_layouts/build_hero_layout.dart';
+import 'package:design_playground/src/dub_website/home/shared_layouts/build_main_actions.dart';
 import 'package:design_playground/src/dub_website/home/shared_layouts/build_sections_layout.dart';
 import 'package:design_playground/src/dub_website/shared_layouts/build_authentication_buttons.dart';
 import 'package:design_playground/src/dub_website/theme/app_colors.dart';
 import 'package:design_playground/src/dub_website/theme/app_constants.dart';
 import 'package:design_playground/src/dub_website/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DubHome extends StatelessWidget {
   static const routeName = '/dub_home';
@@ -59,7 +63,13 @@ class DubHome extends StatelessWidget {
                       padding: EdgeInsets.only(top: AppConstants.a38SpPadding),
                       children: [
                         BuildHeadlineLabel(),
+                        AppConstants.a28SpPadding.verticalSpace,
                         BuildMainActions(),
+                        AppConstants.a24SpPadding.verticalSpace,
+                        BuildHeroLayout(),
+                        AppConstants.a16SpPadding.verticalSpace,
+                        BuildFooter(),
+                        AppConstants.a38SpPadding.verticalSpace,
                       ],
                     ),
                   ));

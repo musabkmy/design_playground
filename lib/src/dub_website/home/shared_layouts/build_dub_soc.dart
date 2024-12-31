@@ -15,7 +15,7 @@ class BuildDubSOC extends StatelessWidget {
     return GestureDetector(
       child: Container(
         width: context.width * .4,
-        constraints: BoxConstraints(minWidth: 250, maxWidth: 300),
+        constraints: BoxConstraints(minWidth: 260, maxWidth: 300),
         height: AppConstants.aMinimumButtonHeight,
         alignment: Alignment.center,
         decoration: BoxDecoration(
