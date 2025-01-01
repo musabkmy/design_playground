@@ -16,7 +16,7 @@ class BuildHeroLayout extends StatelessWidget {
     return Container(
       width: (context.width * .55).spMax,
       margin: EdgeInsets.symmetric(
-          horizontal: context.isDesktop ? 0 : AppConstants.a38SpPadding),
+          horizontal: context.isDesktop ? 0 : AppConstants.a24SpPadding),
       padding: EdgeInsets.symmetric(
           vertical: AppConstants.a8SpPadding,
           horizontal: AppConstants.a8SpPadding),
@@ -218,7 +218,7 @@ class BuildHeroItem extends StatelessWidget {
     return Container(
         width: double.maxFinite,
         padding: EdgeInsets.all(AppConstants.a8SpPadding),
-        margin: EdgeInsets.all(AppConstants.a4SpPadding),
+        margin: EdgeInsets.symmetric(vertical: AppConstants.a4SpPadding),
         decoration: BoxDecoration(
             color: AppColors.card,
             borderRadius: AppConstants.aCard1BorderRadius,
