@@ -1,6 +1,7 @@
+import 'package:design_playground/src/animations/animated_list.dart';
 import 'package:design_playground/src/dub_website/home/home.dart';
+import 'package:design_playground/src/localization/app_localizations.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -68,7 +69,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(),
             darkTheme: ThemeData.dark(),
             themeMode: settingsController.themeMode,
-            initialRoute: DubHome.routeName,
+            initialRoute: ExpandCardDemo.routeName,
             // Define a function to handle named routes in order to support
             // Flutter web url navigation and deep linking.
             onGenerateRoute: (RouteSettings routeSettings) {
@@ -78,6 +79,8 @@ class MyApp extends StatelessWidget {
                   switch (routeSettings.name) {
                     case DubHome.routeName:
                       return const DubHome();
+                    case ExpandCardDemo.routeName:
+                      return ExpandCardDemo();
                     case SettingsView.routeName:
                       return SettingsView(controller: settingsController);
                     case SampleItemDetailsView.routeName:
